@@ -23,6 +23,8 @@
   .contact-sub { font-size:0.85rem; color:#64748b; margin-top:8px; }
   .info-row { display:grid; grid-template-columns:120px 1fr; padding:14px 0; border-top:1px solid rgba(255,255,255,0.06); font-size:0.92rem; }
   .info-row:first-child { border-top:none; }
+  .loc-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch; }
+  @media (max-width: 760px) { .loc-grid { grid-template-columns:1fr; gap:20px; } }
 </style>
 </helmet>
 <div class="page-root">
@@ -63,7 +65,7 @@
     <div style="max-width:1000px; margin:0 auto;">
       <div class="kicker" style="color:#7dd3fc;">LOCATION</div>
       <h2 style="font-size:1.5rem; font-weight:700; margin-bottom:28px; color:#f1f5f9;">회사 정보</h2>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; align-items:stretch;">
+      <div class="loc-grid">
         <div style="background:rgba(12,16,23,0.5); border:1px solid rgba(255,255,255,0.08); border-radius:14px; padding:28px 32px; display:flex; flex-direction:column; justify-content:space-evenly; min-height:320px;">
           <div class="info-row"><div style="color:#94a3b8; font-weight:600;">상호</div><div style="color:#e2e8f0;">주식회사 삼일이엔씨</div></div>
           <div class="info-row"><div style="color:#94a3b8; font-weight:600;">대표이사</div><div style="color:#e2e8f0;">김진영</div></div>

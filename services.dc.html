@@ -19,6 +19,8 @@
   .svc-bullet { width:5px; height:5px; border-radius:50%; background:#38bdf8; flex-shrink:0; }
   .ref-chip { display:inline-block; padding:7px 14px; border-radius:100px; font-size:0.8rem; color:#cbd5e1; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.12); }
   .proc-step { background:rgba(56,189,248,0.06); border:1px solid rgba(56,189,248,0.2); border-radius:12px; padding:22px 24px; }
+  .svc-grid { display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center; }
+  @media (max-width: 760px) { .svc-grid { grid-template-columns:1fr; gap:28px; } .svc-grid > div { order:0 !important; } }
 </style>
 </helmet>
 <div class="page-root">
@@ -37,7 +39,7 @@
 
   <sc-for list="{{ services }}" as="s" hint-placeholder-count="4">
     <section style="padding:90px 10%; background:{{ s.bg }}; border-top:1px solid rgba(56,189,248,0.12);">
-      <div style="max-width:1000px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;">
+      <div class="svc-grid" style="max-width:1000px; margin:0 auto;">
         <div style="{{ s.textOrder }}">
           <div class="kicker">{{ s.num }}</div>
           <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:14px; color:#f8fafc; letter-spacing:-0.5px;">{{ s.title }}</h2>
